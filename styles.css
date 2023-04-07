@@ -1,0 +1,182 @@
+:root{
+    box-sizing: border-box;
+}
+*
+{
+    font-family: Roboto, sans-serif;
+}
+body
+{
+    margin: 0; 
+    padding: 0; 
+    background: linear-gradient(45deg, #fafafa, #dfdfdf);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.container
+{
+    margin: 0 auto; 
+    padding: 16px 16px; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ball 
+{
+    width: 128px;
+    height: 64px; 
+    margin: 0 auto; 
+    z-index: 1; 
+}
+.top
+{
+    margin-bottom: -12px;
+    border-radius: 64px 64px 0 0;
+    background-color: #FC427B;   
+}
+.bottom
+{
+    margin-top: -12px;
+    border-radius: 0 0 64px 64px;
+    background-color: #FAFAFA;   
+}
+
+.center
+{
+    margin: 0 auto; 
+    width: 32px;
+    height: 32px;
+    background-color: #FEA47F;
+    border-radius: 100%;
+    z-index: 2; 
+}
+
+.ball-container
+{
+    margin: 0 auto; 
+    width: fit-content;
+    
+    transition: all 800ms ease-in-out; 
+}
+.ball-container:hover
+{
+    transform: scale(1.6);
+    transform: roatate(45deg);
+}
+.ball-container> *
+{
+    position: relative;
+}
+
+
+.sticker
+{
+    margin: 0 auto; 
+    width: 90%;
+    aspect-ratio: 2.5/3.5;
+    border-radius: 8px;
+    background-color: #182C61;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.sticker> *
+{
+    position: relative;
+
+    
+}
+
+.sticker> p:hover
+{
+    transform: scale(1.1); 
+}
+
+.sticker p{
+    margin: 0; 
+    padding: 0; 
+    width: fit-content;
+    transition: all 800ms ease-in-out;
+}
+.sticker p:nth-of-type(1)
+{
+     
+    font-size: 64px; 
+    font-weight: 200;
+    color: #FEA47F; 
+}
+.sticker p:nth-of-type(2)
+{
+    
+    font-size: 32px; 
+    font-weight: 800;
+    color: #25CCF7; 
+}
+.sticker p:nth-of-type(3)
+{
+    
+    font-size: 128px; 
+    font-weight: 100;
+    color: #58B19F; 
+}
+.sticker p:nth-of-type(4)
+{
+   
+    font-size: 64px; 
+    font-weight: 400;
+    color: #FD7272; 
+}
+.sticker p:nth-of-type(5)
+{
+    
+    font-size: 128px; 
+    font-weight: 800;
+    color: #EAB543; 
+}
+
+@media only screen and (min-width: 768px)
+{
+   .sticker
+   {
+        width: 35%; 
+   }
+   .sticker p:nth-of-type(1)
+   {
+        left: -12%;
+        top: 15%;
+   }
+   .sticker p:nth-of-type(2)
+   {
+        left: 40%;
+        top: 0%; 
+   }
+   .sticker p:nth-of-type(3)
+   {
+        left: -40%;
+        top: 0%; 
+   }
+   .sticker p:nth-of-type(4)
+   {
+        left: 20%;
+        top: 25%; 
+   }
+   .sticker p:nth-of-type(5)
+   {
+        left: 12%;
+        top: 5%; 
+   }
+   .ball-container
+   {
+        top: 15%;
+        right: -25%;
+        transform: scale(1.5);
+   }
+}
